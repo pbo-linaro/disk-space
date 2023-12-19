@@ -12,3 +12,4 @@ jobs:
       - run: df -h
       - run: dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n
       - run: apt purge azure-cli google-cloud-cli microsoft-edge-stable dotnet-* temurin-* google-chrome-stable llvm-* firefox powershell
+      - run: df -h
