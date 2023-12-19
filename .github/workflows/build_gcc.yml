@@ -10,6 +10,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
       - run: df -h .
+      - run: sudo ls
       - uses: easimon/maximize-build-space@master
         with:
           swap-size-mb: 0
