@@ -12,7 +12,4 @@ jobs:
       - run: df -h .
       - run: sudo swapoff -a && sudo rm /mnt/swapfile
       - run: df -h .
-      - uses: easimon/maximize-build-space@master
-        with:
-          remove-dotnet: 'true'
       - run: df -h .
