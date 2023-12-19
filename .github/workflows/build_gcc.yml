@@ -9,7 +9,5 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
-      - run: df -h .
-      - run: sudo swapoff -a && sudo rm /mnt/swapfile
-      - run: df -h .
-      - run: df -h .
+      - run: df -h
+      - run: dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n
