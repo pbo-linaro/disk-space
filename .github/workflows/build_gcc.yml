@@ -13,6 +13,6 @@ jobs:
       - run: dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n
       - run: sudo apt purge -y azure-cli google-cloud-cli microsoft-edge-stable dotnet-* temurin-* google-chrome-stable llvm-* firefox powershell
       - run: df -h
-      - run: du -hc /opt
-      - run: du -hc /var
-      - run: du -h /
+      - run: sudo du -hc /opt
+      - run: sudo du -hc /var
+      - run: sudo du -hc /
