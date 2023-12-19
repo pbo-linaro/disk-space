@@ -6,7 +6,6 @@ on:
 jobs:
   build_gcc:
     runs-on: ubuntu-latest
-    strategy:
     steps:
       - name: checkout
         uses: actions/checkout@v3
