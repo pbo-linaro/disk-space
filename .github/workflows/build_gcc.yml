@@ -26,3 +26,6 @@ jobs:
       - run: podman run hello-world
       - run: df -h
       - run: sudo du -a / | sort -n
+      - run: df -h
+      - run: rm -rf /usr/local/lib/android /usr/local/.ghcup
+      - run: df -h
