@@ -10,5 +10,8 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
       - run: df -h .
-      - run: mkdir /mnt/wip && cd /mnt/wip
+      - uses: easimon/maximize-build-space@master
+        with:
+          swap-size-mb: 0
+          remove-dotnet: 'true'
       - run: df -h .
