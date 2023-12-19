@@ -21,7 +21,7 @@ jobs:
       - run: sudo du -hc /var
       - run: sudo rm -rf /opt/*
       - run: sudo rm -rf /var/*
-      - run: docker run -it hello-world
-      - run: podman run -it hello-world
+      - run: docker run hello-world
+      - run: podman run hello-world
       - run: df -h
       - run: sudo du -hc /
