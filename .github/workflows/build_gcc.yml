@@ -16,11 +16,12 @@ jobs:
       - run: sudo apt purge -y azure-cli google-cloud-cli microsoft-edge-stable dotnet-* temurin-* google-chrome-stable llvm-* firefox powershell
       - run: df -h
       #~10 GB
-      - run: sudo du -hc /opt
+      #- run: sudo du -hc /opt
       #~5 GB
-      - run: sudo du -hc /var
+      #- run: sudo du -hc /var
       - run: sudo rm -rf /opt/*
-      - run: sudo rm -rf /var/*
+      - run: docker system prune -af
+      - run: podman system prune -af
       - run: docker run hello-world
       - run: podman run hello-world
       - run: df -h
